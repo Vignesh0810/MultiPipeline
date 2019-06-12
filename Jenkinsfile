@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo "Success" '
             }
+         }
         stage('Test') {
             steps {
                 sh 'echo "Success" '
