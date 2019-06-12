@@ -1,6 +1,10 @@
 pipeline {
     agent any
     stages {
+         stage(' Pre-Test') {
+            steps {
+                sh 'echo "Success" '
+            }
         stage('Test') {
             steps {
                 sh 'echo "Success" '
