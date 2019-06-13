@@ -1,5 +1,7 @@
 pipeline {
     agent any
+	
+	 triggers { downstream(downstreamProjects: 'job1,job2', threshold: hudson.model.Result.SUCCESS) }
     stages {
          stage(' Pre-Test') {
             steps {
@@ -29,13 +31,5 @@ pipeline {
 
 
 	}
-options([
-  pipelineTriggers([
-    downstream(
-      threshold: 'SUCCESS',
-      downstreamProjects: '../job1'
-    )
-  ])
-])	
-	
+
 }
