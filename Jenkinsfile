@@ -29,7 +29,7 @@ pipeline {
 
 
 	}
-properties([
+options([
   pipelineTriggers([
     downstream(
       threshold: 'SUCCESS',
