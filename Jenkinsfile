@@ -26,5 +26,16 @@ pipeline {
                 sh 'echo "Success" '
             }
         }
-    }
+
+
+	}
+properties([
+  pipelineTriggers([
+    downstream(
+      threshold: 'SUCCESS',
+      downstreamProjects: '../job1'
+    )
+  ])
+])	
+	
 }
