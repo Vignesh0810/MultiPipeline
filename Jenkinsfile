@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	
-	 build:/job1
+	 build :/job1
     stages {
          stage(' Pre-Test') {
             steps {
