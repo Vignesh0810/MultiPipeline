@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build job: '/job1'
+                build job: '/job2'
             }
         }
         stage('CheckOut') {
