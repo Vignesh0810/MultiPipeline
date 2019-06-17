@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	
-	 build :/job1
+	build job: '/job1', parameters: [string(name: 'name', value: 'sruthi')]
     stages {
          stage(' Pre-Test') {
             steps {
