@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	
-	build job: '/job1', parameters: [string(name: 'name', value: 'sruthi')]
+	
     stages {
          stage(' Pre-Test') {
             steps {
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo "Success" '
+                build job: '/job1'
             }
         }
         stage('CheckOut') {
